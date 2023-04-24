@@ -50,4 +50,4 @@ gulp build
 
 deploy to gh-pages automatically after push to branch
 
-deploy: [gh-pages](https://presto-agency.github.io/Alice-Bob/)
+deploy: [gh-pages](https://presto-agency.github.io/Bind-media/)
