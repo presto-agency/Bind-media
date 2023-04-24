@@ -52,7 +52,7 @@ let validateHTML = () => {
 let compressHTML = () => {
     return src([`dev/html/*.html`,`dev/html/**/*.html`])
         .pipe(htmlCompressor({collapseWhitespace: true}))
-        .pipe(dest(`prod`));
+        .pipe(dest(`docs`));
 };
 
 let compileCSSForDev = () => {
@@ -70,7 +70,7 @@ let compileCSSForProd = () => {
             outputStyle: `compressed`,
             precision: 10
         }).on(`error`, sass.logError))
-        .pipe(dest(`prod/styles`));
+        .pipe(dest(`docs/styles`));
 };
 
 let transpileJSForDev = () => {
@@ -83,7 +83,7 @@ let transpileJSForProd = () => {
     return src(`dev/scripts/*.js`)
         .pipe(babel())
         .pipe(jsCompressor())
-        .pipe(dest(`prod/scripts`));
+        .pipe(dest(`docs/scripts`));
 };
 
 // let lintJS = () => {
@@ -120,7 +120,7 @@ let copyUnprocessedAssetsForProd = () => {
         `!dev/img/`,     // ignore images;
         `!dev/**/*.js`,  // ignore JS;
         `!dev/styles/**` // and, ignore Sass/CSS.
-    ], {dot: true}).pipe(dest(`prod`));
+    ], {dot: true}).pipe(dest(`docs`));
 };
 
 let compressImages = () => {
@@ -133,7 +133,7 @@ let compressImages = () => {
                 interlaced: false     // For GIF files. Set to true for compression.
             })
         ))
-        .pipe(dest(`prod/img`));
+        .pipe(dest(`docs/img`));
 };
 
 let serve = () => {
@@ -169,7 +169,7 @@ let serve = () => {
 async function clean() {
     let fs = require(`fs`),
         i,
-        foldersToDelete = [`./temp`, `prod`];
+        foldersToDelete = [`./temp`, `docs`];
 
     for (i = 0; i < foldersToDelete.length; i++) {
         try {
