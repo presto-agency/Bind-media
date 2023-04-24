@@ -1,0 +1,54 @@
+.quote {
+  margin: 50px auto 0;
+  max-width: 850px;
+  text-align: center;
+
+  &__footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    h6 {
+      strong {
+        color: var(--light-blue);
+      }
+    }
+  }
+}
+
+.quote-rd {
+  text-align: center;
+  max-width: 650px;
+  margin: 84px auto 142px;
+  @include mobile-l {
+    margin: 121px auto 83px;
+  }
+
+  &.blue-to-light {
+    span {
+      background: var(--blue-gradient);
+    }
+  }
+
+  &.orange {
+    span {
+      background: var(--orange-gradient);
+    }
+  }
+
+  &__color-text {
+    @include font(48px, 400, 60px);
+    @include tablet-m {
+      margin: 14px 0 0 0;
+      padding: 0 16px;
+      @include font(35px, 400, 45px);
+    }
+
+    span {
+      font-weight: 700;
+      padding: 0 10px;
+      color: var(--white);
+    }
+  }
+}

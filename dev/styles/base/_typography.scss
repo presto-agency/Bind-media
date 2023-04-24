@@ -1,0 +1,101 @@
+h1{
+  @include font(64px, 400, 74px);
+  margin-bottom: 40px;
+  @include tablet-m {
+    @include font(35px, 400, 45px)
+  }
+  @include mobile-l{
+    margin-bottom: 10px;
+  }
+}
+
+
+h2{
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 74px;
+}
+
+h3{
+  @include font(48px, 400, 60px);
+  margin-bottom: 30px;
+  @include tablet-m {
+    @include font(35px, 400, 45px)
+  }
+}
+
+h4{
+  font-size: 42px;
+  line-height: 54px;
+}
+
+h5{
+  @include font(24px, 600, 35px);
+  margin-bottom: 15px;
+}
+
+h6{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.subtitle{
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.39em;
+  text-transform: uppercase;
+  margin: 10px 0;
+  &._small{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: initial;
+    letter-spacing: initial;
+    max-width: 521px;
+    margin: 10px auto;
+  }
+}
+
+.text2{
+  @include font(14px, 600, 30px)
+}
+
+.body-large {
+  @include font(24px, 400, 30px);
+  font-style: italic;
+}
+
+strong{
+  font-weight: 800;
+}
+
+.blue-text{
+  strong {
+    background: var(--blue-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.orange-text{
+  strong {
+    background: var(--orange-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.hero-text{
+  strong {
+    background: var(--blue-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+.tomato-text{
+  strong {
+    background: var(--tomato);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

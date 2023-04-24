@@ -1,0 +1,71 @@
+body{
+  font-family: "Gilroy";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--dark-grey);
+  @include tablet-m{
+    font-weight: 500;
+  }
+}
+
+main{
+  overflow: hidden;
+  margin-top: 142px;
+  @include laptop-s-m {
+    margin-top: 100px;
+  }
+}
+
+button{
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+ul{
+  li{
+    list-style-type: none;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  border: 1px solid #dfdfdf;
+  background-color: inherit;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #dfdfdf;
+}
+
+.mob{
+  @media (min-width: 769px) {
+    display: none!important;
+  }
+}
+.desk{
+  @media (max-width: 768px){
+    display: none!important;
+  }
+}
+img{
+  object-fit: cover;
+}
+.body-lock{
+  position: relative;
+  overflow: hidden;
+}
